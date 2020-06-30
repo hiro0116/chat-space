@@ -21,11 +21,14 @@
           align-items: center;
           justify-content: flex-end;
           &__icon {
-            color: #ffffff;
             padding-left: 5px;
             text-decoration: underline;
+            .top-items__icons__icon-btn {
+              color: #ffffff;
+              font-size: 16px;
+            }
+          }
         }
-      }
     }
   }
   .side-group {
@@ -36,10 +39,14 @@
           &__name {
             font-size: 15px;
             padding: 20px 0 5px 0;
+            color: #ffffff;
+            text-decoration: none;
           }
           &__message {
             font-size: 11px;
             padding-bottom: 40px;
+            color: #ffffff;
+            text-decoration: none;
           }
     }
   }

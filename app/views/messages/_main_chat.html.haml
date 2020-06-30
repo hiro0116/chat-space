@@ -1,24 +1,22 @@
 .main-chat
   .chat__header
     .chat__group
-      .chat__group-name test
-      .chat__member-name Member : hiro
+      .chat__group-name
+        = @group.name
+      .chat__member-name
+        Member : 
+        %ul
+          - @group.users.each do |user|
+            %li= user.name
     .chat__btn 
-      = link_to "Edit", "#", class: "chat__btn-edit"
+      = link_to "Edit", edit_group_path(@group), class: "chat__btn-edit"
   .chat-log
-    .chat-message1
-      .chat-message1__name hiro
-      .chat-message1__day 2020/06/27/(sat) 18:00
-    .chat-message1__text hello
-    .chat-message2
-      .chat-message2__name hiro
-      .chat-message2__day 2020/06/27/(sat) 18:00
-    .chat-message2__text hey
+    = render @messages
   .chat-form
-    .message
-      .text type a message
-      .img
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "file"}
-    .send-btn SEND
+    = form_with model: [@group, @message], html: {class: "form"},local: true do |f|
+      .message
+        = f.text_field :content, class: "text", placeholder: "type a message"
+        = f.label :image, class: "img" do
+          = icon('far', 'image')
+          = f.file_field :image, class: "file"
+      = f.submit "Send", class: "send-btn"
