@@ -17,6 +17,11 @@
         .chat__member-name {
           font-size: 12px;
           color: #999999;
+          display: flex;
+          li {
+            display: inline-block;
+            padding: 0 5px;
+          }
         }
       }
       .chat__btn {
@@ -54,23 +59,6 @@
         color: #434a54;
         padding-bottom: 46px;
       }
-      .chat-message2 {
-        display: flex;
-        padding-bottom: 12px;
-        &__name {
-          font-size: 16px;
-          color: #333333;
-        }
-        &__day {
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-      .chat-message2__text {
-        font-size: 14px;
-        color: #434a54;
-        padding-bottom: 46px;
-      }
     }
     .chat-form {
       background-color: #d2d2d2;
@@ -79,24 +67,26 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 40px;
-      .message {
+      .form {
         display: flex;
         width: 100%;
-        position: relative;
-        margin-right: 15px;
-        .text {
-          height: 50px;
+        .message {
+          display: flex;
           width: 100%;
-          background-color: #ffffff;
-          line-height: 50px;
-          padding-left: 10px;
-        }
-        .img {
-          position: absolute;
-          right: 10px;
-          line-height: 50px;
-          font-size: 25px;
-          .input-box__image {
+          position: relative;
+          margin-right: 15px;
+          .text {
+            height: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            line-height: 50px;
+            padding-left: 10px;
+          }
+          .img {
+            position: absolute;
+            right: 10px;
+            line-height: 50px;
+            font-size: 25px;
             .file {
               display: none;
             }
