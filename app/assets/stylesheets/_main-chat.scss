@@ -42,6 +42,7 @@
       background-color: #fafafa;
       height: calc(100vh - 190px);
       padding: 0 40px;
+      overflow: scroll;
       .chat-message {
         display: flex;
         padding: 35px 0 12px 0;
