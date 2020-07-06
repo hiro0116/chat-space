@@ -47,7 +47,6 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      console.log(message)
       let html = buildHTML(message)
       $('.chat-log').append(html)
       $('.chat-log').animate({ scrollTop: $('.chat-log')[0].scrollHeight});
