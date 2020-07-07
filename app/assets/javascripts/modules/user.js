@@ -27,7 +27,7 @@ $(function() {
                 </div>
                 `;
   $(".ChatMembers").append(html)
-}
+  }
 
   $("#UserSearch__field").on("keyup", function() {
     let input = $("#UserSearch__field").val();
