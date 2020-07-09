@@ -38,16 +38,15 @@
       .group-lists {
         .group-list {
           text-decoration: none;
+          color: #ffffff;
         }
           &__name {
             font-size: 15px;
             padding: 20px 0 5px 0;
-            color: #ffffff;
           }
           &__message {
             font-size: 11px;
             padding-bottom: 40px;
-            color: #ffffff;
           }
     }
   }
